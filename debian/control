@@ -31,7 +31,7 @@ Conflicts: xserver-xorg-input-mouse
 Package: xserver-xlibre-input-mouse-udeb
 XC-Package-Type: udeb
 Section: debian-installer
-Architecture: hurd-any kfreebsd-any
+Architecture: any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
