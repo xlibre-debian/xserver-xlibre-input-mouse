@@ -23,7 +23,7 @@
 # Initialize Autoconf
 AC_PREREQ([2.60])
 AC_INIT([xlibre-xf86-input-mouse],
-        [1.9.6],
+        [25.0.0],
         [https://github.com/X11Libre/xf86-input-mouse/issues],
         [xlibre-xf86-input-mouse])
 AC_CONFIG_SRCDIR([Makefile.am])
@@ -42,7 +42,6 @@ m4_ifndef([XORG_MACROS_VERSION],
           [m4_fatal([must install xorg-macros 1.8 or later before running autoconf/autogen])])
 XORG_MACROS_VERSION(1.8)
 XORG_DEFAULT_OPTIONS
-XORG_WITH_LINT
 
 # Checks for library functions
 AC_CHECK_FUNCS([asprintf timingsafe_memcmp])
@@ -87,11 +86,7 @@ case $host_os in
 esac
 AC_SUBST([OS_MOUSE_NAME])
 
-DRIVER_NAME=mouse
-AC_SUBST([DRIVER_NAME])
-
 AC_CONFIG_FILES([Makefile
-                 xorg-mouse.pc
                  include/Makefile
                  src/Makefile
                  man/Makefile])
