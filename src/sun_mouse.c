@@ -45,10 +45,7 @@
  * dealings in this Software without prior written authorization from the
  * XFree86 Project.
  */
-
-#ifdef HAVE_CONFIG_H
 #include "config.h"
-#endif
 
 #ifdef HAVE_XORG_CONFIG_H
 #include <xorg-config.h>
@@ -157,7 +154,7 @@ VuidMsePtr getVuidMsePriv(InputInfoPtr pInfo)
    list or changing pInfo->fd while xf86Wakeup is looping through the list
    causes server crashes */
 static CARD32
-vuidRemoveMouse(OsTimerPtr timer, CARD32 now, pointer arg)
+vuidRemoveMouse(OsTimerPtr timer, CARD32 now, void *arg)
 {
     InputInfoPtr pInfo = (InputInfoPtr) arg;
 

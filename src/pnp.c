@@ -19,10 +19,7 @@
  * TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
  * PERFORMANCE OF THIS SOFTWARE.
  */
-
-#ifdef HAVE_CONFIG_H
 #include "config.h"
-#endif
 
 #include <xorg-server.h>
 #include <stdio.h>
@@ -235,7 +232,7 @@ pnpgets(InputInfoPtr pInfo, char *buf, Bool *prePNP)
 {
     int i;
     char c;
-    pointer pnpOpts;
+    void *pnpOpts;
 
 #if 0
     /*
